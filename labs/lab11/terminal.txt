@@ -1,0 +1,105 @@
+$ whoami
+bublik
+$ apt-get update
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:5 https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu jammy InRelease
+Reading package lists...
+$ apt-get install -y python3 python3-pip python3-setuptools git make
+Reading package lists...
+Building dependency tree...
+Reading state information...
+make is already the newest version (4.3-4.1build1).
+git is already the newest version (1:2.34.1-1ubuntu1.16).
+python3 is already the newest version (3.10.6-1~22.04.1).
+python3-setuptools is already the newest version (59.6.0-1.2ubuntu0.22.04.3).
+python3-pip is already the newest version (22.0.2+dfsg-1ubuntu0.7).
+The following packages were automatically installed and are no longer required:
+  golang-1.18-go golang-1.18-src golang-1.22-go golang-1.22-src golang-1.23-go
+  golang-1.23-src gyp htop libc-ares2 libjs-events libjs-highlight.js
+  libjs-inherits libjs-is-typedarray libjs-psl libjs-source-map
+  libjs-sprintf-js libjs-typedarray-to-buffer libnl-3-200 libnl-genl-3-200
+  libnode-dev libnode72 libnotify-bin libnotify4 libssl-dev libuv1-dev
+  node-abbrev node-ansi-regex node-ansi-styles node-ansistyles
+  node-are-we-there-yet node-arrify node-asap node-asynckit
+  node-balanced-match node-brace-expansion node-chownr node-clean-yaml-object
+  node-color-convert node-color-name node-commander node-core-util-is
+  node-decompress-response node-delayed-stream node-delegates node-depd
+  node-diff node-encoding node-end-of-stream node-err-code
+  node-escape-string-regexp node-fancy-log node-foreground-child
+  node-fs.realpath node-function-bind node-get-stream node-glob node-growl
+  node-has-flag node-has-unicode node-hosted-git-info node-iconv-lite
+  node-iferr node-imurmurhash node-indent-string node-inflight node-inherits
+  node-ini node-ip node-ip-regex node-is-buffer node-is-plain-obj
+  node-is-typedarray node-isarray node-isexe node-json-parse-better-errors
+  node-jsonparse node-kind-of node-lodash-packages node-lowercase-keys
+  node-lru-cache node-mimic-response node-minimatch node-minimist
+  node-minipass node-mute-stream node-negotiator node-npm-bundled node-once
+  node-osenv node-p-cancelable node-p-map node-path-is-absolute
+$ cd '/home/bublik/isec/lab11/src'
+$ git clone --depth 1 https://github.com/dylanaraps/neofetch.git
+Cloning into 'neofetch'...
+$ cd neofetch && make install PREFIX=/home/bublik/.local
+$ /home/bublik/.local/bin/neofetch --version
+Neofetch 7.1.0
+$ git clone --depth 1 https://github.com/sivel/speedtest-cli.git
+Cloning into 'speedtest-cli'...
+$ cd speedtest-cli && python3 setup.py install --user
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+zip_safe flag not set; analyzing archive contents...
+running install
+running bdist_egg
+running egg_info
+creating speedtest_cli.egg-info
+writing speedtest_cli.egg-info/PKG-INFO
+writing dependency_links to speedtest_cli.egg-info/dependency_links.txt
+writing entry points to speedtest_cli.egg-info/entry_points.txt
+writing top-level names to speedtest_cli.egg-info/top_level.txt
+writing manifest file 'speedtest_cli.egg-info/SOURCES.txt'
+reading manifest file 'speedtest_cli.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'speedtest_cli.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib
+copying speedtest.py -> build/lib
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+copying build/lib/speedtest.py -> build/bdist.linux-x86_64/egg
+byte-compiling build/bdist.linux-x86_64/egg/speedtest.py to speedtest.cpython-310.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying speedtest_cli.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying speedtest_cli.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying speedtest_cli.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying speedtest_cli.egg-info/entry_points.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying speedtest_cli.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating dist
+creating 'dist/speedtest_cli-2.1.4b1-py3.10.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing speedtest_cli-2.1.4b1-py3.10.egg
+Copying speedtest_cli-2.1.4b1-py3.10.egg to /home/bublik/.local/lib/python3.10/site-packages
+Adding speedtest-cli 2.1.4b1 to easy-install.pth file
+$ /home/bublik/.local/bin/speedtest-cli --version
+speedtest-cli 2.1.4b1
+Python 3.10.12 (main, Jan  8 2026, 06:52:19) [GCC 11.4.0]
+$ /home/bublik/.local/bin/neofetch --stdout
+bublik@DESKTOP-BOA5RKH 
+---------------------- 
+OS: Ubuntu 22.04.5 LTS on Windows x86_64 
+Kernel: 6.6.87.2-microsoft-standard-WSL2 
+Uptime: 3 mins 
+Packages: 961 (dpkg), 9 (snap) 
+Shell: bash 5.1.16 
+Terminal: Relay(803) 
+CPU: Intel i5-10210U (8) @ 2.112GHz 
+GPU: Microsoft Corporation Device 008e 
+Memory: 995MiB / 3840MiB 
+

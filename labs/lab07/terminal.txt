@@ -1,0 +1,17 @@
+$ whoami
+root
+$ service cron start
+$ cat > /home/bublik/write_line.sh
+$ cat > /home/bublik/send_mail_stub.py
+$ crontab -u bublik -r
+$ crontab -u bublik -
+$ crontab -u bublik -l
+* * * * * /home/bublik/write_line.sh
+* * * * * /usr/bin/python3 /home/bublik/send_mail_stub.py
+Waiting 70 seconds for cron execution...
+$ tail -n 5 /home/bublik/file.txt
+New line at Fri Feb 27 14:50:04 +05 2026
+$ tail -n 5 /home/bublik/email_simulated.log
+Email simulation at 2026-02-27T14:50:04.382671\n
+$ python3 /home/bublik/send_mail_stub.py
+(manual run to verify python cron task format)

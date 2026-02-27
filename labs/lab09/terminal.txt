@@ -1,0 +1,141 @@
+$ whoami
+root
+$ apt-get update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3010 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu jammy InRelease [18.3 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3281 kB]
+Get:8 https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu jammy/main amd64 Packages [7188 B]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [430 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [14.1 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [5231 kB]
+Get:12 https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu jammy/main Translation-en [2320 B]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [498 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [19.2 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [5406 kB]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [996 kB]
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [680 B]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1018 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [1028 kB]
+Get:20 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [225 kB]
+$ apt-get -s upgrade
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages were automatically installed and are no longer required:
+  golang-1.18-go golang-1.18-src golang-1.22-go golang-1.22-src golang-1.23-go
+  golang-1.23-src gyp htop libc-ares2 libjs-events libjs-highlight.js
+  libjs-inherits libjs-is-typedarray libjs-psl libjs-source-map
+  libjs-sprintf-js libjs-typedarray-to-buffer libnl-3-200 libnl-genl-3-200
+  libnode-dev libnode72 libnotify-bin libnotify4 libssl-dev libuv1-dev
+  node-abbrev node-ansi-regex node-ansi-styles node-ansistyles
+  node-are-we-there-yet node-arrify node-asap node-asynckit
+  node-balanced-match node-brace-expansion node-chownr node-clean-yaml-object
+  node-color-convert node-color-name node-commander node-core-util-is
+  node-decompress-response node-delayed-stream node-delegates node-depd
+  node-diff node-encoding node-end-of-stream node-err-code
+  node-escape-string-regexp node-fancy-log node-foreground-child
+  node-fs.realpath node-function-bind node-get-stream node-glob node-growl
+  node-has-flag node-has-unicode node-hosted-git-info node-iconv-lite
+  node-iferr node-imurmurhash node-indent-string node-inflight node-inherits
+  node-ini node-ip node-ip-regex node-is-buffer node-is-plain-obj
+  node-is-typedarray node-isarray node-isexe node-json-parse-better-errors
+  node-jsonparse node-kind-of node-lodash-packages node-lowercase-keys
+  node-lru-cache node-mimic-response node-minimatch node-minimist
+  node-minipass node-mute-stream node-negotiator node-npm-bundled node-once
+$ apt-get install -y nginx
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  golang-1.18-go golang-1.18-src golang-1.22-go golang-1.22-src golang-1.23-go
+  golang-1.23-src gyp htop libc-ares2 libjs-events libjs-highlight.js
+  libjs-inherits libjs-is-typedarray libjs-psl libjs-source-map
+  libjs-sprintf-js libjs-typedarray-to-buffer libnl-3-200 libnl-genl-3-200
+  libnode-dev libnode72 libnotify-bin libnotify4 libssl-dev libuv1-dev
+  node-abbrev node-ansi-regex node-ansi-styles node-ansistyles
+  node-are-we-there-yet node-arrify node-asap node-asynckit
+  node-balanced-match node-brace-expansion node-chownr node-clean-yaml-object
+  node-color-convert node-color-name node-commander node-core-util-is
+  node-decompress-response node-delayed-stream node-delegates node-depd
+  node-diff node-encoding node-end-of-stream node-err-code
+  node-escape-string-regexp node-fancy-log node-foreground-child
+  node-fs.realpath node-function-bind node-get-stream node-glob node-growl
+  node-has-flag node-has-unicode node-hosted-git-info node-iconv-lite
+  node-iferr node-imurmurhash node-indent-string node-inflight node-inherits
+  node-ini node-ip node-ip-regex node-is-buffer node-is-plain-obj
+  node-is-typedarray node-isarray node-isexe node-json-parse-better-errors
+  node-jsonparse node-kind-of node-lodash-packages node-lowercase-keys
+  node-lru-cache node-mimic-response node-minimatch node-minimist
+  node-minipass node-mute-stream node-negotiator node-npm-bundled node-once
+  node-osenv node-p-cancelable node-p-map node-path-is-absolute
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-pump node-quick-lru node-read node-readable-stream
+  node-resolve node-retry node-safe-buffer node-set-blocking node-signal-exit
+  node-slash node-slice-ansi node-source-map node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sprintf-js node-stealthy-require node-string-decoder
+  node-supports-color node-text-table node-time-stamp node-tmatch
+  node-typedarray-to-buffer node-universalify node-util-deprecate
+  node-validate-npm-package-license node-webidl-conversions node-whatwg-fetch
+  node-wrappy node-yallist nodejs-doc
+$ apt search nginx
+Sorting...
+Full Text Search...
+centreon-plugins/jammy 0.0~20220113-1 all
+  Collection of Nagios plugins to monitor OS, services and network devices
+
+collectd-core/jammy-updates 5.12.0-10ubuntu0.1 amd64
+  statistics collection and monitoring daemon (core system)
+
+elpa-nginx-mode/jammy 1.1.9-2 all
+  major mode for editing nginx config files
+
+fcgiwrap/jammy 1.1.0-12 amd64
+  simple server to run CGI applications over FastCGI
+
+gitweb/jammy-updates,jammy-security 1:2.34.1-1ubuntu1.16 all
+  fast, scalable, distributed revision control system (web interface)
+
+golang-github-gorilla-handlers-dev/jammy 1.4.2-1 all
+  collection of useful handlers for Go's net/http package
+
+$ apt-cache depends nginx
+nginx
+ |Depends: nginx-core
+ |Depends: nginx-full
+ |Depends: nginx-light
+  Depends: nginx-extras
+ |Depends: nginx-core
+ |Depends: nginx-full
+ |Depends: nginx-light
+  Depends: nginx-extras
+  Breaks: <libnginx-mod-http-lua>
+$ apt-get -s remove nginx
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  golang-1.18-go golang-1.18-src golang-1.22-go golang-1.22-src golang-1.23-go
+  golang-1.23-src gyp htop libc-ares2 libjs-events libjs-highlight.js
+  libjs-inherits libjs-is-typedarray libjs-psl libjs-source-map
+  libjs-sprintf-js libjs-typedarray-to-buffer libnl-3-200 libnl-genl-3-200
+  libnode-dev libnode72 libnotify-bin libnotify4 libssl-dev libuv1-dev
+  node-abbrev node-ansi-regex node-ansi-styles node-ansistyles
+  node-are-we-there-yet node-arrify node-asap node-asynckit
+  node-balanced-match node-brace-expansion node-chownr node-clean-yaml-object
+  node-color-convert node-color-name node-commander node-core-util-is
+  node-decompress-response node-delayed-stream node-delegates node-depd
+  node-diff node-encoding node-end-of-stream node-err-code
+  node-escape-string-regexp node-fancy-log node-foreground-child
+  node-fs.realpath node-function-bind node-get-stream node-glob node-growl
+  node-has-flag node-has-unicode node-hosted-git-info node-iconv-lite
+  node-iferr node-imurmurhash node-indent-string node-inflight node-inherits
+  node-ini node-ip node-ip-regex node-is-buffer node-is-plain-obj

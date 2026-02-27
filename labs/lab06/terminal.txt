@@ -1,0 +1,18 @@
+$ whoami
+root
+$ cd '/home/bublik/isec/lab06'
+$ touch file.txt
+$ ls -la file.txt
+-rw-r--r-- 1 root root 0 Feb 27 14:39 file.txt
+$ chmod 754 file.txt
+$ ls -la file.txt
+-rwxr-xr-- 1 root root 0 Feb 27 14:39 file.txt
+$ chown bublik:user1 file.txt
+$ ls -la file.txt
+-rwxr-xr-- 1 bublik user1 0 Feb 27 14:39 file.txt
+$ su - bublik -c "echo bublik_can_write >> '/home/bublik/isec/lab06/file.txt'"
+$ su - user1 -c "echo user1_try_write >> '/home/bublik/isec/lab06/file.txt'"
+-bash: line 1: /home/bublik/isec/lab06/file.txt: Permission denied
+user1 write failed (permission denied)
+$ cat file.txt
+bublik_can_write

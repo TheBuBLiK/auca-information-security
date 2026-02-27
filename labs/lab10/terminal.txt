@@ -1,0 +1,40 @@
+$ whoami
+root
+$ cat > /var/www/html/my_site.html
+$ cat > /etc/nginx/sites-available/my_site_lab10
+$ mkdir -p '/home/bublik/isec/lab10/api_mock' && echo '{"status":"ok","source":"backend"}' > data.json
+$ python3 -m http.server 9001 --directory '/home/bublik/isec/lab10/api_mock'
+backend_pid=1130
+$ nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+$ service nginx restart
+$ curl -i http://127.0.0.1:8000
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    27  100    27    0     0  23336      0 --:--:-- --:--:-- --:--:-- 27000
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Fri, 27 Feb 2026 09:59:39 GMT
+Content-Type: text/html
+Content-Length: 27
+Last-Modified: Fri, 27 Feb 2026 09:59:37 GMT
+Connection: keep-alive
+ETag: "69a16b09-1b"
+Accept-Ranges: bytes
+
+<div>My site on 8000</div>
+$ curl -i http://127.0.0.1:8000/api/data.json
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    35  100    35    0     0   3058      0 --:--:-- --:--:-- --:--:--  3181
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Fri, 27 Feb 2026 09:59:39 GMT
+Content-Type: application/json
+Content-Length: 35
+Connection: keep-alive
+Last-Modified: Fri, 27 Feb 2026 09:59:37 GMT
+
+{"status":"ok","source":"backend"}
+$ kill 1130

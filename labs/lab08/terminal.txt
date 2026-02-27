@@ -1,0 +1,19 @@
+$ whoami
+bublik
+$ printf 'some text\nmore text\neven more text\n' > file.txt
+$ cat -n file.txt
+     1	some text
+     2	more text
+     3	even more text
+$ vim -Es file.txt -c '2d' -c 'wq'
+$ cat -n file.txt
+     1	some text
+     2	even more text
+$ vim -Es file.txt -c '%d' -c 'wq'
+$ cat -n file.txt
+$ printf 'new line 1\nnew line 2\n' > file.txt
+$ vim -Es file.txt -c 'set number' -c 'w' -c 'q'
+$ cat -n file.txt
+     1	new line 1
+     2	new line 2
+Explored additional vim commands: yy, p, u, /pattern, :set number
