@@ -1,7 +1,8 @@
 # Information Security Lab Sessions
 
-Hands-on Information Security exercises completed in Linux/WSL environments.
-This repository contains practical labs with terminal outputs, scripts, logs, and screenshots.
+This repository contains Information Security exercises completed in Linux/WSL environments, practical labs with terminal outputs, scripts, logs, and screenshots.
+
+All laboratory assignments will be **completed on time according to the course deadlines and follow the requirements** provided by the instructor.
 
 ---
 
