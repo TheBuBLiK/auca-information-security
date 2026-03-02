@@ -5,6 +5,15 @@ This repository contains practical labs with terminal outputs, scripts, logs, an
 
 ---
 
+## Student information
+
+- Name: **Amantai Akunov**
+- Course: **Information Security**
+- University: **American University of Central Asia (AUCA)**
+- Semester: **Spring 2026**
+
+---
+
 ## Overview
 
 This repository tracks my course progress from Linux fundamentals to basic offensive and defensive security workflows:
